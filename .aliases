@@ -7,6 +7,19 @@ alias .....="cd ../../../.."
 alias ~="cd ~"
 alias home="cd ~"
 
+# mkdir
+function md() {
+	mkdir -p "$@" && cd "$@"
+}
+
+
+
+# This script fragment emits Cygwin rulez under bash/cygwin
+if [ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ];then
+	alias www="cd /cygdrive/c/webroot"
+fi
+
+
 # List all files colorized in long format
 alias l="ls -l ${colorflag}"
 
