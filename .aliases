@@ -12,7 +12,8 @@ function md() {
 	mkdir -p "$@" && cd "$@"
 }
 
-
+# vi
+alias vi='vim'
 
 # This script fragment emits Cygwin rulez under bash/cygwin
 if [ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ];then
