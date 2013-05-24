@@ -7,6 +7,27 @@ alias .....="cd ../../../.."
 alias ~="cd ~"
 alias home="cd ~"
 
+# mkdir
+function md() {
+	mkdir -p "$@" && cd "$@"
+}
+
+# vi
+alias vi='vim'
+
+# This script fragment emits Cygwin rulez under bash/cygwin
+if [ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ];then
+	alias www="cd /cygdrive/c/webroot"
+fi
+
+
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+	colorflag="--color"
+else # OS X `ls`
+	colorflag="-G"
+fi
+
 # List all files colorized in long format
 alias l="ls -l ${colorflag}"
 alias ll="ls -l ${colorflag}"
