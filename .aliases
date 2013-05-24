@@ -15,11 +15,6 @@ function md() {
 # vi
 alias vi='vim'
 
-# This script fragment emits Cygwin rulez under bash/cygwin
-if [ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ];then
-	alias www="cd /cygdrive/c/webroot"
-fi
-
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -44,5 +39,6 @@ if [ `uname` == "Darwin" ];then
 	alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 else
 	alias subl="/cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe &"
+	alias www="cd /cygdrive/c/webroot"
 fi
 
