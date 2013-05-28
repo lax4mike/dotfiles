@@ -38,7 +38,7 @@ alias lsd='ls -l | grep "^d"'
 if [ `uname` == "Darwin" ];then
 	alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 else
-	alias subl="/cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe &"
+	alias subl="/cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe"
 	alias www="cd /cygdrive/c/webroot"
 fi
 
