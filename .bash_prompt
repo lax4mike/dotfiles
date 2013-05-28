@@ -65,4 +65,5 @@ function gitbranch() {
 	echo "${PREPOSITION}\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")${COLOR_GIT}\$(parse_git_branch)${PREPOSITION}"
 }
 
-PS1="${BOLD}\n${COLOR_TIME}$(date +'%k:%M:%S') $(usernamehost)${PREPOSITION}in ${COLOR_DIR}\w${PREPOSITION}$(gitbranch)${WHITE}\n\$ ${RESET}"
+# need \[ and \] for ${RESET}, http://stackoverflow.com/questions/10594786/bash-prompt-history-issue
+PS1="${BOLD}\n${COLOR_TIME}$(date +'%k:%M:%S') $(usernamehost)${PREPOSITION}in ${COLOR_DIR}\w${PREPOSITION}$(gitbranch)${WHITE}\n\$ \[${RESET}\]"
