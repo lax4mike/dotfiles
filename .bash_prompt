@@ -24,9 +24,9 @@ default_username='-'
 	# BLUE=$(tput setaf 69)
 	# MAGENTA=$(tput setaf 5)
 	# CYAN=$(tput setaf 6)
-	# WHITE=$(tput setaf 7)
-	# GREY=$(tput setaf 8)
 
+	WHITE=$(tput setaf 7)
+	GREY=$(tput setaf 8)
 	BOLD=$(tput bold)
 	RESET=$(tput sgr0)
 
@@ -66,4 +66,4 @@ function gitbranch() {
 }
 
 # need \[ and \] for ${RESET}, http://stackoverflow.com/questions/10594786/bash-prompt-history-issue
-PS1="${BOLD}\n${COLOR_TIME}$(date +'%k:%M:%S') $(usernamehost)${PREPOSITION}in ${COLOR_DIR}\w${PREPOSITION}$(gitbranch)${WHITE}\n\$ \[${RESET}\]"
+PS1="${BOLD}\n${COLOR_TIME}\t $(usernamehost)${PREPOSITION}in ${COLOR_DIR}\w${PREPOSITION}$(gitbranch)${WHITE}\n\$ \[${RESET}\]"
