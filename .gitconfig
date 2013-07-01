@@ -18,3 +18,9 @@
 	untracked = cyan
 [merge]
 	log = true
+
+[diff]  
+    tool = p4merge  
+[difftool "p4diff"]  
+    external = '"C:/Program Files/Perforce/p4merge.exe" "$LOCAL" "$REMOTE"'
+
