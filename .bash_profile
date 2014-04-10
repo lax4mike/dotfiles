@@ -5,4 +5,6 @@ for file in ./.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
+export GREP_OPTIONS='--color=auto'
+
 . ~/.z.sh

@@ -5,6 +5,6 @@ function md() {
 
 # find shorthand
 function f() {
-    find . -name "$1"
+    find . | grep -i "$1"
 }
 
