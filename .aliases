@@ -23,6 +23,9 @@ function md() {
 # vi
 alias vi='vim'
 
+# mongo db
+alias mongostart="launchctl start homebrew.mxcl.mongodb"
+alias mongostop="launchctl stop homebrew.mxcl.mongodb"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
